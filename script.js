@@ -87,11 +87,12 @@ function showSlidesLBMod() {
     slidesLBMod[i].style.display = "none";  
   }
   LBModSlideIndex++;
-  if (slidesLBMod > slidesLBMod.length) {slidesLBMod = 1}    
+  if (LBModSlideIndex > slidesLBMod.length) {LBModSlideIndex = 1}    
   for (i = 0; i < dots2.length; i++) {
     dots2[i].className = dots2[i].className.replace(" active", "");
   }
   console.log(slidesLBMod[LBModSlideIndex-1])
+  console.log(LBModSlideIndex-1);
   slidesLBMod[LBModSlideIndex-1].style.display = "block";  
   dots2[LBModSlideIndex-1].className += " active";
   setTimeout(showSlidesLBMod, 4500); // Every 1000 counts as a second
