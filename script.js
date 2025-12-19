@@ -72,6 +72,7 @@ function showSlides4() {
   for (i = 0; i < dots4.length; i++) {
     dots4[i].className = dots4[i].className.replace(" active", "");
   }
+  console.log(slides4[slideIndex4-1]);
   slides4[slideIndex4-1].style.display = "block";  
   dots4[slideIndex4-1].className += " active";
   setTimeout(showSlides4, 4500); // Every 1000 counts as a second
@@ -80,15 +81,17 @@ function showSlides4() {
 function showSlidesLBMod() {
   let i;
   let slidesLBMod = document.getElementsByClassName("mySlidesLBMod");
+  console.log(slidesLBMod)
   let dots2 = document.getElementsByClassName("dotLBMod");
   for (i = 0; i < slidesLBMod.length; i++) {
     slidesLBMod[i].style.display = "none";  
   }
-  slideIndex2++;
+  LBModSlideIndex++;
   if (slidesLBMod > slidesLBMod.length) {slidesLBMod = 1}    
   for (i = 0; i < dots2.length; i++) {
     dots2[i].className = dots2[i].className.replace(" active", "");
   }
+  console.log(slidesLBMod[LBModSlideIndex-1])
   slidesLBMod[LBModSlideIndex-1].style.display = "block";  
   dots2[LBModSlideIndex-1].className += " active";
   setTimeout(showSlidesLBMod, 4500); // Every 1000 counts as a second
